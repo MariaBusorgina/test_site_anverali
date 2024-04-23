@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница исполнителя</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_6.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать на главную страницу исполнителя!</h1>
+        <ul class="navigation">
+            <li class="last"><a href="{% url 'logout' %}" class="button">Выйти</a></li>
+        </ul>
+    </div>
+</body>
+</html>

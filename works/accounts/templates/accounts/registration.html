@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_4.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Регистрация</h2>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="id_first_name">Имя:</label>
+                {{ form.first_name }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_last_name">Фамилия:</label>
+                {{ form.last_name }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_email">Почта:</label>
+                {{ form.email }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_password1">Пароль:</label>
+                {{ form.password1 }}
+                <small>Пароль должен быть не менее 8 символов, не содержать только цифры, не быть слишком простым.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="id_password2">Подтверждение пароля:</label>
+                {{ form.password2 }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_user_type">Выберите:</label>
+                {{ form.role }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_contact">Контактные данные:</label>
+                {{ form.contact }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_experience">Опыт:</label>
+                {{ form.experience }}
+            </div>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+</body>
+</html>
+
